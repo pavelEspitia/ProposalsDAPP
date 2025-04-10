@@ -1,0 +1,702 @@
+{
+    "contractName": "Proposals",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_title",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_description",
+                    "type": "string"
+                }
+            ],
+            "name": "createProposal",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getProposals",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "string",
+                            "name": "title",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "description",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "createdBy",
+                            "type": "address"
+                        }
+                    ],
+                    "internalType": "struct Proposals.Proposal[]",
+                    "name": "",
+                    "type": "tuple[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "proposals",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address",
+                    "name": "createdBy",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"}],\"name\":\"createProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getProposals\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"createdBy\",\"type\":\"address\"}],\"internalType\":\"struct Proposals.Proposal[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"proposals\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"createdBy\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"c:/Users/PavelEspitia/FullstackBlockchainDeveloper/contracts/contracts/Proposals.sol\":\"Proposals\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"c:/Users/PavelEspitia/FullstackBlockchainDeveloper/contracts/contracts/Proposals.sol\":{\"keccak256\":\"0x6ed5c3f1b28d1bf1601c6ac9d1fb3b9afe75a99a6d66ad601a2dd2e02de87dbe\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d18b23f843b45ee26189866df70ce0080e49a5905387421e18f3a04fe7cc753c\",\"dweb:/ipfs/QmS6P3QKUoUP5NB9vrYhaEQHbs9Qz6vwz7D8TG1knxvEuX\"]}},\"version\":1}",
+    "bytecode": "608080604052346100165761078c908161001c8239f35b600080fdfe6040608081526004908136101561001557600080fd5b600090813560e01c8063013cf08b146104b357806362564c4814610356576365e481e21461004257600080fd5b3461035257806003193601126103525767ffffffffffffffff92803584811161034e5761007290369083016106fa565b9060243585811161034a5761008a90369083016106fa565b90835192610097846105c0565b835260209384840192835283019333855285549168010000000000000000831015610337576100cc6001938481018955610538565b959095610325575191825189811161031257806100e98854610586565b94601f958681116102c4575b508390868311600114610265578b9261025a575b5050600019600383901b1c191690851b1786555b8386019451918251998a1161024757506101378554610586565b838111610204575b508092891160011461019f5750968092819288996002989994610194575b50501b916000199060031b1c19161790555b019060018060a01b039051166bffffffffffffffffffffffff60a01b82541617905580f35b01519250388061015d565b909791601f198316988589528289209289905b8b82106101ed57505083600298999a106101d4575b505050811b01905561016f565b015160001960f88460031b161c191690553880806101c7565b8087859682949686015181550195019301906101b2565b85895281892084808c0160051c820192848d1061023e575b0160051c019085905b82811061023357505061013f565b8a8155018590610225565b9250819261021c565b634e487b7160e01b895260419052602488fd5b015190503880610109565b898c52848c208894509190601f1984168d5b878282106102ae5750508411610295575b505050811b01865561011d565b015160001960f88460031b161c19169055388080610288565b8385015186558b97909501949384019301610277565b909150888b52838b208680850160051c820192868610610309575b918991869594930160051c01915b8281106102fb5750506100f5565b8d81558594508991016102ed565b925081926102df565b634e487b7160e01b895260418352602489fd5b634e487b7160e01b8852878252602488fd5b634e487b7160e01b875260419052602486fd5b8480fd5b8380fd5b5080fd5b50913461035257816003193601126103525781549067ffffffffffffffff82116104a05750825191602092610390848460051b01826105f2565b82815281805283810192827f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563855b83831061044f57505050508451938085019181865251809252858501868360051b8701019493965b8388106103f35786860387f35b90919293948380600192603f198a82030186528851908561042f61041f845160608086528501906106ba565b85850151848203878601526106ba565b9281878060a01b03910151169101529701930197019690939291936103e6565b6003886001928b9a97989a51610464816105c0565b61046d86610614565b815261047a858701610614565b83820152848060a01b036002870154168d820152815201920192019190969493966103be565b634e487b7160e01b835260419052602482fd5b508234610534576020366003190112610534573591805483101561053157506104de61051b92610538565b50906104e982610614565b916105296104f960018301610614565b91600260018060a01b03910154169183519586956060875260608701906106ba565b9085820360208701526106ba565b918301520390f35b80fd5b8280fd5b90600091825481101561057257600390838052027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563019190565b634e487b7160e01b83526032600452602483fd5b90600182811c921680156105b6575b60208310146105a057565b634e487b7160e01b600052602260045260246000fd5b91607f1691610595565b6060810190811067ffffffffffffffff8211176105dc57604052565b634e487b7160e01b600052604160045260246000fd5b90601f8019910116810190811067ffffffffffffffff8211176105dc57604052565b906040519182600082549261062884610586565b9081845260019485811690816000146106975750600114610654575b5050610652925003836105f2565b565b9093915060005260209081600020936000915b81831061067f57505061065293508201013880610644565b85548884018501529485019487945091830191610667565b91505061065294506020925060ff191682840152151560051b8201013880610644565b919082519283825260005b8481106106e6575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016106c5565b81601f820112156107515780359067ffffffffffffffff82116105dc576040519261072f601f8401601f1916602001856105f2565b8284526020838301011161075157816000926020809301838601378301015290565b600080fdfea264697066735822122056a5b16bc5bcc1db7b5aaaa810fa506972e757f638819e4ce08e207d649cda7a64736f6c63430008110033",
+    "deployedBytecode": "6040608081526004908136101561001557600080fd5b600090813560e01c8063013cf08b146104b357806362564c4814610356576365e481e21461004257600080fd5b3461035257806003193601126103525767ffffffffffffffff92803584811161034e5761007290369083016106fa565b9060243585811161034a5761008a90369083016106fa565b90835192610097846105c0565b835260209384840192835283019333855285549168010000000000000000831015610337576100cc6001938481018955610538565b959095610325575191825189811161031257806100e98854610586565b94601f958681116102c4575b508390868311600114610265578b9261025a575b5050600019600383901b1c191690851b1786555b8386019451918251998a1161024757506101378554610586565b838111610204575b508092891160011461019f5750968092819288996002989994610194575b50501b916000199060031b1c19161790555b019060018060a01b039051166bffffffffffffffffffffffff60a01b82541617905580f35b01519250388061015d565b909791601f198316988589528289209289905b8b82106101ed57505083600298999a106101d4575b505050811b01905561016f565b015160001960f88460031b161c191690553880806101c7565b8087859682949686015181550195019301906101b2565b85895281892084808c0160051c820192848d1061023e575b0160051c019085905b82811061023357505061013f565b8a8155018590610225565b9250819261021c565b634e487b7160e01b895260419052602488fd5b015190503880610109565b898c52848c208894509190601f1984168d5b878282106102ae5750508411610295575b505050811b01865561011d565b015160001960f88460031b161c19169055388080610288565b8385015186558b97909501949384019301610277565b909150888b52838b208680850160051c820192868610610309575b918991869594930160051c01915b8281106102fb5750506100f5565b8d81558594508991016102ed565b925081926102df565b634e487b7160e01b895260418352602489fd5b634e487b7160e01b8852878252602488fd5b634e487b7160e01b875260419052602486fd5b8480fd5b8380fd5b5080fd5b50913461035257816003193601126103525781549067ffffffffffffffff82116104a05750825191602092610390848460051b01826105f2565b82815281805283810192827f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563855b83831061044f57505050508451938085019181865251809252858501868360051b8701019493965b8388106103f35786860387f35b90919293948380600192603f198a82030186528851908561042f61041f845160608086528501906106ba565b85850151848203878601526106ba565b9281878060a01b03910151169101529701930197019690939291936103e6565b6003886001928b9a97989a51610464816105c0565b61046d86610614565b815261047a858701610614565b83820152848060a01b036002870154168d820152815201920192019190969493966103be565b634e487b7160e01b835260419052602482fd5b508234610534576020366003190112610534573591805483101561053157506104de61051b92610538565b50906104e982610614565b916105296104f960018301610614565b91600260018060a01b03910154169183519586956060875260608701906106ba565b9085820360208701526106ba565b918301520390f35b80fd5b8280fd5b90600091825481101561057257600390838052027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e563019190565b634e487b7160e01b83526032600452602483fd5b90600182811c921680156105b6575b60208310146105a057565b634e487b7160e01b600052602260045260246000fd5b91607f1691610595565b6060810190811067ffffffffffffffff8211176105dc57604052565b634e487b7160e01b600052604160045260246000fd5b90601f8019910116810190811067ffffffffffffffff8211176105dc57604052565b906040519182600082549261062884610586565b9081845260019485811690816000146106975750600114610654575b5050610652925003836105f2565b565b9093915060005260209081600020936000915b81831061067f57505061065293508201013880610644565b85548884018501529485019487945091830191610667565b91505061065294506020925060ff191682840152151560051b8201013880610644565b919082519283825260005b8481106106e6575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016106c5565b81601f820112156107515780359067ffffffffffffffff82116105dc576040519261072f601f8401601f1916602001856105f2565b8284526020838301011161075157816000926020809301838601378301015290565b600080fdfea264697066735822122056a5b16bc5bcc1db7b5aaaa810fa506972e757f638819e4ce08e207d649cda7a64736f6c63430008110033",
+    "sourceMap": "62:847:0:-:0;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "62:847:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;494:165;;;;62:847;;;494:165;;623:10;;62:847;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;62:847:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;62:847:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;62:847:0;;;;;;;;;;;;-1:-1:-1;62:847:0;;;;;;;;;;;;;-1:-1:-1;62:847:0;;-1:-1:-1;;62:847:0;;;;;;;;;;;;;-1:-1:-1;62:847:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;62:847:0;;;;;;;;;;;;;-1:-1:-1;;;62:847:0;;;;;;;;;-1:-1:-1;;;62:847:0;;;;;;;;;-1:-1:-1;;;62:847:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;62:847:0;;;;;;;;;;;;;;;;-1:-1:-1;;62:847:0;;;;;;;;238:27;;;;;;;62:847;238:27;;:::i;:::-;;;;;;:::i;:::-;;62:847;238:27;62:847;238:27;;;:::i;:::-;62:847;238:27;62:847;;;;;238:27;;62:847;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;238:27;;;62:847;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;-1:-1:-1;;;62:847:0;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;-1:-1:-1;62:847:0;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;;;;;-1:-1:-1;62:847:0;;;;-1:-1:-1;62:847:0;;-1:-1:-1;62:847:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;62:847:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;62:847:0;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;62:847:0;;;;;;;;;;;;;;:::o;:::-;-1:-1:-1;62:847:0;",
+    "sourcePath": "c:/Users/PavelEspitia/FullstackBlockchainDeveloper/contracts/contracts/Proposals.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.17+commit.8df45f5f"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/PavelEspitia/FullstackBlockchainDeveloper/contracts/contracts/Proposals.sol",
+        "exportedSymbols": {
+            "Proposals": [
+                47
+            ]
+        },
+        "id": 48,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "0.8",
+                    ".17"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "35:23:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "Proposals",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 47,
+                "linearizedBaseContracts": [
+                    47
+                ],
+                "name": "Proposals",
+                "nameLocation": "71:9:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "canonicalName": "Proposals.Proposal",
+                        "id": 8,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 3,
+                                "mutability": "mutable",
+                                "name": "title",
+                                "nameLocation": "160:5:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 8,
+                                "src": "153:12:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 2,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "153:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 5,
+                                "mutability": "mutable",
+                                "name": "description",
+                                "nameLocation": "183:11:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 8,
+                                "src": "176:18:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 4,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "176:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 7,
+                                "mutability": "mutable",
+                                "name": "createdBy",
+                                "nameLocation": "213:9:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 8,
+                                "src": "205:17:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                },
+                                "typeName": {
+                                    "id": 6,
+                                    "name": "address",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "205:7:0",
+                                    "stateMutability": "nonpayable",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Proposal",
+                        "nameLocation": "133:8:0",
+                        "nodeType": "StructDefinition",
+                        "scope": 47,
+                        "src": "126:104:0",
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "013cf08b",
+                        "id": 12,
+                        "mutability": "mutable",
+                        "name": "proposals",
+                        "nameLocation": "256:9:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 47,
+                        "src": "238:27:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_Proposal_$8_storage_$dyn_storage",
+                            "typeString": "struct Proposals.Proposal[]"
+                        },
+                        "typeName": {
+                            "baseType": {
+                                "id": 10,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 9,
+                                    "name": "Proposal",
+                                    "nameLocations": [
+                                        "238:8:0"
+                                    ],
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 8,
+                                    "src": "238:8:0"
+                                },
+                                "referencedDeclaration": 8,
+                                "src": "238:8:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Proposal_$8_storage_ptr",
+                                    "typeString": "struct Proposals.Proposal"
+                                }
+                            },
+                            "id": 11,
+                            "nodeType": "ArrayTypeName",
+                            "src": "238:10:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Proposal_$8_storage_$dyn_storage_ptr",
+                                "typeString": "struct Proposals.Proposal[]"
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 35,
+                            "nodeType": "Block",
+                            "src": "409:348:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        21
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 21,
+                                            "mutability": "mutable",
+                                            "name": "newProposal",
+                                            "nameLocation": "480:11:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 35,
+                                            "src": "464:27:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Proposal_$8_memory_ptr",
+                                                "typeString": "struct Proposals.Proposal"
+                                            },
+                                            "typeName": {
+                                                "id": 20,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 19,
+                                                    "name": "Proposal",
+                                                    "nameLocations": [
+                                                        "464:8:0"
+                                                    ],
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 8,
+                                                    "src": "464:8:0"
+                                                },
+                                                "referencedDeclaration": 8,
+                                                "src": "464:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Proposal_$8_storage_ptr",
+                                                    "typeString": "struct Proposals.Proposal"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 28,
+                                    "initialValue": {
+                                        "arguments": [
+                                            {
+                                                "id": 23,
+                                                "name": "_title",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 14,
+                                                "src": "543:6:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "id": 24,
+                                                "name": "_description",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 16,
+                                                "src": "581:12:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 25,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "623:3:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 26,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberLocation": "627:6:0",
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "623:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            ],
+                                            "id": 22,
+                                            "name": "Proposal",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 8,
+                                            "src": "494:8:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_type$_t_struct$_Proposal_$8_storage_ptr_$",
+                                                "typeString": "type(struct Proposals.Proposal storage pointer)"
+                                            }
+                                        },
+                                        "id": 27,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "structConstructorCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [
+                                            "536:5:0",
+                                            "568:11:0",
+                                            "612:9:0"
+                                        ],
+                                        "names": [
+                                            "title",
+                                            "description",
+                                            "createdBy"
+                                        ],
+                                        "nodeType": "FunctionCall",
+                                        "src": "494:165:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Proposal_$8_memory_ptr",
+                                            "typeString": "struct Proposals.Proposal memory"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "464:195:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 32,
+                                                "name": "newProposal",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 21,
+                                                "src": "735:11:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Proposal_$8_memory_ptr",
+                                                    "typeString": "struct Proposals.Proposal memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Proposal_$8_memory_ptr",
+                                                    "typeString": "struct Proposals.Proposal memory"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 29,
+                                                "name": "proposals",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 12,
+                                                "src": "720:9:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_array$_t_struct$_Proposal_$8_storage_$dyn_storage",
+                                                    "typeString": "struct Proposals.Proposal storage ref[] storage ref"
+                                                }
+                                            },
+                                            "id": 31,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "730:4:0",
+                                            "memberName": "push",
+                                            "nodeType": "MemberAccess",
+                                            "src": "720:14:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Proposal_$8_storage_$dyn_storage_ptr_$_t_struct$_Proposal_$8_storage_$returns$__$bound_to$_t_array$_t_struct$_Proposal_$8_storage_$dyn_storage_ptr_$",
+                                                "typeString": "function (struct Proposals.Proposal storage ref[] storage pointer,struct Proposals.Proposal storage ref)"
+                                            }
+                                        },
+                                        "id": 33,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "720:27:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 34,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "720:27:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "65e481e2",
+                        "id": 36,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "createProposal",
+                        "nameLocation": "318:14:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 17,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 14,
+                                    "mutability": "mutable",
+                                    "name": "_title",
+                                    "nameLocation": "347:6:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 36,
+                                    "src": "333:20:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 13,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "333:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 16,
+                                    "mutability": "mutable",
+                                    "name": "_description",
+                                    "nameLocation": "378:12:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 36,
+                                    "src": "364:26:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 15,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "364:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "332:69:0"
+                        },
+                        "returnParameters": {
+                            "id": 18,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "409:0:0"
+                        },
+                        "scope": 47,
+                        "src": "309:448:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 45,
+                            "nodeType": "Block",
+                            "src": "871:35:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 43,
+                                        "name": "proposals",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 12,
+                                        "src": "889:9:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Proposal_$8_storage_$dyn_storage",
+                                            "typeString": "struct Proposals.Proposal storage ref[] storage ref"
+                                        }
+                                    },
+                                    "functionReturnParameters": 42,
+                                    "id": 44,
+                                    "nodeType": "Return",
+                                    "src": "882:16:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "62564c48",
+                        "id": 46,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getProposals",
+                        "nameLocation": "816:12:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 37,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "828:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 42,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 41,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 46,
+                                    "src": "852:17:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_array$_t_struct$_Proposal_$8_memory_ptr_$dyn_memory_ptr",
+                                        "typeString": "struct Proposals.Proposal[]"
+                                    },
+                                    "typeName": {
+                                        "baseType": {
+                                            "id": 39,
+                                            "nodeType": "UserDefinedTypeName",
+                                            "pathNode": {
+                                                "id": 38,
+                                                "name": "Proposal",
+                                                "nameLocations": [
+                                                    "852:8:0"
+                                                ],
+                                                "nodeType": "IdentifierPath",
+                                                "referencedDeclaration": 8,
+                                                "src": "852:8:0"
+                                            },
+                                            "referencedDeclaration": 8,
+                                            "src": "852:8:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Proposal_$8_storage_ptr",
+                                                "typeString": "struct Proposals.Proposal"
+                                            }
+                                        },
+                                        "id": 40,
+                                        "nodeType": "ArrayTypeName",
+                                        "src": "852:10:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Proposal_$8_storage_$dyn_storage_ptr",
+                                            "typeString": "struct Proposals.Proposal[]"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "851:19:0"
+                        },
+                        "scope": 47,
+                        "src": "807:99:0",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 48,
+                "src": "62:847:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "35:874:0"
+    },
+    "functionHashes": {
+        "createProposal(string,string)": "65e481e2",
+        "getProposals()": "62564c48",
+        "proposals(uint256)": "013cf08b"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "386400",
+            "executionCost": "431",
+            "totalCost": "386831"
+        },
+        "external": {
+            "createProposal(string,string)": "infinite",
+            "getProposals()": "infinite",
+            "proposals(uint256)": "infinite"
+        }
+    }
+}
